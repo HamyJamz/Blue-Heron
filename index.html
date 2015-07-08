@@ -34,47 +34,69 @@
     <!--google font ARVO-->
     <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 
+
+    <!--GOOGLE MAPS -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map-canvas');
+            var myLatLng = new google.maps.LatLng(38.1897202,-92.6505649);
+            var mapOptions = {
+                center: myLatLng,
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }/*mapOptions*/
+
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                title:"The Blue Heron"
+            });
+
+            marker.setMap(map);
+        }/*Initialize*/
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <!--GOOGLE MAPS-->
+
 </head>
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">The Blue Heron Restaurant</a>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">The Blue Heron Restaurant</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hours">Hours</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+
+            </div><!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
 
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#hours">Hours</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#location">Location</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#gallery">POOPYTUBA</a></li>
-            </ul>
-
-        </div><!--/.nav-collapse -->
-    </div>
-    <hr>
-</nav>
-
-<div id="cover" class="center-block">
-    <h1 id="nameText">
+    </nav>
 
 
-        <br>
-        <small >
 
-        </small>
-    </h1>
+    <div id="cover" class="center-block">
+
         <!-- Carousel
     ================================================== -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -83,68 +105,81 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
 
-                <div class="item active">
+                <div id="slide1" class="item active">
 
                     <div class="container">
+                        <img class="placeholder" src="http://placehold.it/1200x500" alt="...">
+
                         <div class="carousel-caption">
-                            TEXT INSIDE CAROUSEL CAPTION
+
                         </div>
 
                     </div>
                 </div>
 
-                <div class="item">
+                <div id="slide2" class="item">
 
                     <div class="container">
+                        <img class="placeholder" src="http://placehold.it/1200x500" alt="...">
+
                         <div class="carousel-caption">
-                            <p>Offering Two Private Dining Rooms for Larger Groups, Please Inquire.</p>
+
                         </div>
                     </div>
                 </div>
 
-                <div class="item">
+                <div id="slide3" class="item">
+                    <img class="placeholder" src="http://placehold.it/1200x500" alt="...">
 
                     <div class="container">
                         <div class="carousel-caption">
-                            <p>
-                                Original Blue Heron House Dressing
-                                and Seasoning are available at the restaurant
-                                or call to have them shipped.
-                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="slide4" class="item">
+                    <img class="placeholder" src="http://placehold.it/1200x500" alt="...">
+
+                    <div class="container">
+                        <div class="carousel-caption">
+
                         </div>
 
                     </div>
                 </div>
             </div>
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div><!-- /.carousel -->
 
 
 
 
-</div>
+    </div><!--COVER-->
+
+
 
 
 
 <div class="container">
 
     <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>
+                Information Here!!!
+            </h1>
+        </div>
 
         <div class="row">
 
             <!--about-->
             <div id="about" class="col-md-12 ">
-                ABOUT
+                <h1>ABOUT</h1>
+                <img class="placeholder" src="http://placehold.it/1200x800" alt="...">
             </div><!--about-->
         </div><!--row-->
 
@@ -153,7 +188,7 @@
 
             <!--contact-->
             <div id="contact" class="col-md-12 ">
-                CONTACT
+                <h1>CONTACT</h1>
                 The Blue Heron Restaurant----573-365-4646
                 <br>
                 PLEASE NOTE:  (The answering machine does not take messages
@@ -161,6 +196,7 @@
                 The Blue Heron Office----573-365-5743
                 <br>
                 The Blue Heron Office FAX----573-365-5743
+                <img class="placeholder" src="http://placehold.it/1200x800" alt="...">
             </div><!--contact-->
         </div><!--row-->
 
@@ -170,7 +206,8 @@
 
             <!--hours-->
             <div id="hours" class="col-md-12 ">
-                HOURS
+                <h1>HOURS</h1>
+                <img class="placeholder" src="http://placehold.it/1200x800" alt="...">
             </div><!--hours-->
         </div><!--row-->
 
@@ -181,7 +218,8 @@
 
             <!--menu-->
             <div id="menu" class="col-md-12 ">
-                MENU
+                <h1>MENU</h1>
+                <img class="placeholder" src="http://placehold.it/1200x800" alt="...">
             </div><!--menu-->
         </div><!--row-->
 
@@ -192,7 +230,10 @@
 
             <!--location-->
             <div id="location" class="col-md-12 ">
-                LOCATION
+                <h1>LOCATION</h1>
+
+                <div id="map-canvas"></div>
+                <img class="placeholder" src="http://placehold.it/1200x800" alt="...">
             </div><!--location-->
         </div><!--row-->
 
@@ -202,7 +243,8 @@
 
             <!--gallery-->
             <div id="gallery" class="col-md-12 ">
-                GALLERY
+                <h1>GALLERY</h1>
+                <img class="placeholder" src="http://placehold.it/1200x800" alt="...">
             </div><!--gallery-->
         </div><!--row-->
 
@@ -232,5 +274,8 @@
 <script src="dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="dist/js/ie10-viewport-bug-workaround.js"></script>
+<!--GOOGLE MAPS-->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
 </body>
 </html>
