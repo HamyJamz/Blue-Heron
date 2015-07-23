@@ -42,7 +42,9 @@
     <script>
         function initialize() {
             var mapCanvas = document.getElementById('map-canvas');
+
             var myLatLng = new google.maps.LatLng(38.1897202,-92.6505649);
+
             var mapOptions = {
                 center: myLatLng,
                 zoom: 10,
@@ -51,12 +53,35 @@
 
             var map = new google.maps.Map(mapCanvas, mapOptions)
 
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                title:"The Blue Heron"
+            var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<a href="https://www.google.com/maps/dir/Current+Location/180+Blue+Heron+Hill+Lake+Ozark+MO+65409">'+
+            '<h1 id="firstHeading" class="firstHeading">The Blue Heron Restaurant</h1>'+
+            '</a>'+
+            '<div id="bodyContent">'+
+            '<p>180 Blue Heron Hill, Lake Ozark MO. 65049</p>'+
+            '<br/>'+
+            '<p>The Blue Heron Restaurant is located at the corner of Horseshoe Bend Parkway and Business 54 in Lake Ozark Missouri.</p>'+
+            '</div>'+
+            '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
             });
 
-            marker.setMap(map);
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                title:"The Blue Heron",
+                map: map
+
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+            });
+
+            /*marker.setMap(map);*/
         }/*Initialize*/
 
       google.maps.event.addDomListener(window, 'load', initialize);
@@ -174,7 +199,7 @@
     <div class="container-fluid">
         <div class="jumbotron">
             <h1>
-                We are offering two private dining rooms for larger groups, please inquire!
+               Hi mom!
             </h1>
         </div>
 
@@ -190,10 +215,51 @@
 
                 <h1 class="section-title">ABOUT</h1>
 
-                <img class="placeholder" src="http://placehold.it/1200x100" alt="...">
-                <img class="placeholder" src="http://placehold.it/1200x100" alt="...">
-                <img class="placeholder" src="http://placehold.it/1200x100" alt="...">
+                <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="info-box row">
+                            <h1>
+                                The Blue Heron Restaurant, celebrating over thirty years of casual fine dining at the lake.
+                            </h1>
+                        </div>
+                        <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
 
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <p>
+
+                                    In January, 1984  Joseph H. Boer purchased the home of Glen and Alice Wood. The months that
+                                    followed saw the home transformed. The doors of The Blue Heron Restaurant opened for the
+                                    first time on July 4th, 1984.
+                                </p>
+
+                                <p>
+                                    The restaurant is open Tuesday through Saturday. The doors open at 5:00 pm, and seating
+                                    begins at 5:30 pm upon arrival, no reservations required. The restaurant's atmosphere is
+                                    casual evening and there is no dress code.
+                                </p>
+
+                                <p>
+                                    Larger groups may inquire about our two private dining rooms.
+                                </p>
+
+                                <h2>
+                                    We look forward to seeing you!
+                                </h2>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div><!--col 12-->
+                </div><!--row-->
+
+                <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
             </div><!--about-->
         </div><!--row-->
 
@@ -215,6 +281,7 @@
                 <div class="col-md-12">
                     <h1 class="section-title">CONTACT</h1>
                 </div>
+                <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
 
 
                 <div class="col-md-6">
@@ -279,7 +346,7 @@
                         </div>
                     </div>
                 </div>
-
+                <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
             </div><!--contact-->
 
         </div><!--row-->
@@ -288,63 +355,8 @@
 
         <div class="row"><img class="placeholder" src="http://placehold.it/1200x100" alt="..."></div>
 
-
-    <!--hours-->
-        <div class="section row">
-
-            <!--hours-->
-            <div id="hours" class="col-md-12 ">
-
-                <h1 class="section-title">HOURS</h1>
-
-
-                <div class="col-md-12 ">
-                    <div class="row">
-                        <div class="col-md-12">
-                            Lounge opens at five dining at 5:30
-                        </div>
-
-                        <div class="col-md-2">
-                            <a href=""><span class="glyphicon glyphicon-time" aria-hidden="true"></span></a>
-                        </div>
-
-                        <div >
-                            <div class="col-md-3">
-                                <h1>Monday:</h1> Closed
-                            </div>
-                            <div class="col-md-3">
-                                <h1>Tuesday:</h1> 5:00PM - 9:00PM
-                            </div>
-                            <div class="col-md-3">
-                                <h1>Wednesday:</h1> 5:00PM - 9:00PM
-                            </div>
-                            <div class="col-md-3">
-                                <h1>Thursday:</h1> 5:00PM - 9:00PM
-                            </div>
-                            <div class="col-md-3">
-                                <h1>Friday:</h1> 5:00PM - 10:00PM
-                            </div>
-                            <div class="col-md-3">
-                                <h1>Saturday:</h1> 5:00PM - 10:00PM
-                            </div>
-                            <div class="col-md-3">
-                                <h1>Sunday:</h1> Closed
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div><!--hours-->
-        </div><!--row-->
-
-
-
-        <div class="row"><img class="placeholder" src="http://placehold.it/1200x100" alt="..."></div>
-
-
-
-
-        <!--hours2-->
+        
+        <!--hours-->
         <div class="section row">
 
             <!--hours-->
@@ -354,12 +366,15 @@
 
 
                 <div class="big-box col-md-12" >
-                    <img class="placeholder" src="http://placehold.it/1200x100" alt="...">
+
+
                     <div class="row">
                         <div class="col-md-12">
 
                             <div class="row">
-                                <h1>Doors and lounge open at 5:00PM, Dining begins at 5:30PM </h1>
+                                <div class="col-md-10 col-md-offset-2">
+                                    <h1>Doors and lounge open at 5:00PM, Dining begins at 5:30PM </h1>
+                                </div>
                             </div>
 
                             <div class="row">
@@ -416,34 +431,47 @@
             <div id="location" class="col-md-12 ">
 
                 <h1 class="section-title">LOCATION</h1>
+                <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
+                <!-- =============================================================================================== -->
+                <!--LOCATION CONTENT HERE -->
+                <!-- =============================================================================================== -->
+                    <div class="row ">
+                        <div class="col-md-4">
 
-                <div class="col-md-4">
+                            <div class="row">
+                                <div class="info-box col-md-12 ">
+                                    <a href="https://www.google.com/maps/dir/Current+Location/180+Blue+Heron+Hill+Lake+Ozark+MO+65409">
+                                        <h1>
+                                            180 Blue Heron Hill, Lake Ozark MO. 65049
+                                        </h1>
+                                    </a>
+                                </div>
+                            </div>
 
-                    <div class="row">
-                        <div class="info-box col-md-12 ">
-                            <address>
-                                <h1>
-                                    180 Blue Heron Hill, Lake Ozark MO. 65049
-                                </h1>
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <br/>
+                                    <p>
+                                        Located at the corner of
+                                        Horseshoe Bend Parkway and Business 54 in Lake Ozark Missouri.
+                                    </p>
+                                    <br/>
+                                </div> <!--COL 12-->
+                            </div> <!--ROW-->
 
-                            </address>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12 ">
-                            The Blue Heron Restaurant is located at the corner of
-                            Horseshoe Bend Parkway and Business 54 in Lake Ozark Missouri.
-                        </div>
-                    </div>
-
-                </div>
+                        </div><!--COL 4-->
 
 
-                <div class="col-md-6 col-md-offset-1" id="map-canvas"></div>
 
+                        <div class="col-md-6 col-md-offset-1" id="map-canvas"></div>
+
+                    </div><!--row-->
+                <!-- =============================================================================================== -->
+                <!--LOCATION CONTENT END -->
+                <!-- =============================================================================================== -->
+                <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
             </div><!--location-->
-        </div><!--row-->
+        </div><!--section row-->
 
 
 
@@ -458,7 +486,9 @@
             <div id="gallery" class=" section-title col-md-12 ">
 
                 <h1 class="section-title">GALLERY</h1>
-                <img class="placeholder" src="http://placehold.it/1200x800" alt="...">
+                <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
+
+                <img class="placeholder" src="http://placehold.it/1200x50" alt="...">
             </div><!--gallery-->
         </div><!--row-->
 
@@ -474,9 +504,10 @@
 
 
 <div id="footer" class="container">
-    special thanks to:
-    <a href="http://getbootstrap.com/">http://getbootstrap.com/</a>
-    <a href="http://glyphicons.com/">http://glyphicons.com/</a>
+
+    <a href="http://getbootstrap.com/">http://getbootstrap.com/</a> |
+    <a href="http://glyphicons.com/">http://glyphicons.com/</a> |
+    <a href="https://pixabay.com/">https://pixabay.com/</a>
 </div>
 
 

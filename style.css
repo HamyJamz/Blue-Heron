@@ -2,47 +2,47 @@ html body {
     position: relative;
     min-height: 200%;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-
-    /*
-
-
-    font-family: 'Arvo', serif;
-    */
-
     font-family: 'Alice', serif;
-
+    font-size: x-large;
 
     background-image: url(watercolor-flip.png);
     background-size:cover;
-    background-color:#777777;
-    font-size: x-large;
+    background-color: rgba(255, 255, 255, .7);
+
+    background-blend-mode: color;
 }
+
 
 .glyphicon{
     font-size:100px;
     /*BLUE*/
-    /*color: rgba(51, 122, 183, 1);*/
-    color:white;
+    color:rgba(77, 113, 144, 1);
+    /*color:white;*/
+    text-align: center;
 }
 
 .info-box{
-    background-color: rgba(51, 122, 183, 1);
+    background-color: rgba(77, 113, 144, 1);
     color: white;
-    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
 
 }
 
+.info-box a{
+    color:white;
+}
+
 
 .section{
     /*background-image:url(watercolor.jpg);*/
 
-    background-color: rgba(240, 240, 240, 1);
+    background-color: rgba(240, 240, 240, 0.7);
     margin-top: 40px;
     padding: 10px;
-    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
     border-radius:6px;
 }
 
@@ -77,11 +77,10 @@ h1, h2, h3, h4, h5, h6{
 
 /* MAP
 -------------------------------------------------- */
- #map-canvas {
-
-      height:500px;
-
-      }
+ #map-canvas{
+    width:500px;
+    height:395px;
+ }
 
 
 
