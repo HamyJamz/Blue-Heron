@@ -2,24 +2,125 @@ html body {
     position: relative;
     min-height: 200%;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    font-family: 'Alice', serif;
+    font-size: x-large;
 
-    font-family: 'Arvo', serif, font-weight: 400;
-    background-color:#f1f1f1;
+    background-image: url(watercolor-flip.png);
+    background-size:cover;
+    background-color: rgba(255, 255, 255, .7);
+
+    background-blend-mode: color;
 }
+
+
+.glyphicon{
+    font-size:100px;
+    /*BLUE*/
+    color:rgba(77, 113, 144, 1);
+    /*color:white;*/
+    text-align: center;
+}
+
+.info-box{
+    background-color: rgba(77, 113, 144, 1);
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+
+.info-box a{
+    color:white;
+}
+
+
+.section{
+    /*background-image:url(watercolor.jpg);*/
+
+    background-color: rgba(240, 240, 240, 0.7);
+    margin-top: 40px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+    border-radius:6px;
+}
+
+.section-title{
+      font-size: 60px;
+}
+
+
+
+
+
+
+
+/* PLACES WITH LOBSTER FONT
+-------------------------------------------------- */
+.navbar-bran{
+     font-family: 'Lobster', cursive;
+
+}
+
+.navbar-inverse .navbar-brand {
+    font-family: 'Lobster', cursive;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lobster', cursive;
+}
+
+
+
+
+/* MAP
+-------------------------------------------------- */
+ #map-canvas{
+    width:500px;
+    height:395px;
+ }
+
 
 
 
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
+.navbar-brand{
+    font-size:x-large;
+}
 .navbar
 {
-      background: none;
+      background:rgba(10,10,10,0.7);
       border: none;
       align:center;
       margin-left:auto;
       margin-right:auto;
       text-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+      font-size:large;
+}
+
+.navbar-inverse .navbar-brand
+{
+    color:white;
+}
+
+.navbar-inverse .navbar-brand:hover
+{
+    text-decoration: underline;
+
+}
+
+.navbar-inverse .navbar-nav>li>a
+{
+    color:white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover
+{
+    text-decoration: underline;
 
 }
 
@@ -27,7 +128,9 @@ html body {
 
 
 
-/* CUSTOMIZE THE COVER
+
+
+/* CUSTOMIZE THE carousel cover
 -------------------------------------------------- */
 #cover {
     min-height:100%;
@@ -37,30 +140,48 @@ html body {
 
     text-align: center;
     color: white;
-    padding-top:15%;
 
-    background-image:url(BH_sign.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
-/* PLACES WITH LOBSTER FONT
--------------------------------------------------- */
-.navbar-bran{
-     font-family: 'Lobster', cursive;
-}
-
-.navbar-inverse .navbar-brand {
-  font-family: 'Lobster', cursive;
+#slide1{
+     background-image:url(p1.jpeg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
  }
 
+ #slide2{
+     background-image:url(p2.jpeg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+ }
 
-h1{
- font-family: 'Lobster', cursive;
+ #slide3{
+     background-image:url(p3.jpeg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+ }
+
+ #slide4{
+      background-image:url(BH_sign.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  }
+
+#myCarousel{
+    min-height:100%;
+    min-width: 100%;
+
+    background-color:black;
 }
 
-
+.placeholder{
+    visibility: hidden;
+}
 
 
 
