@@ -1,0 +1,18 @@
+html body {
+
+
+    background-image: url(watercolor-flip.png);
+    background-size:cover;
+    background-color: rgba(255, 255, 255, .7);
+
+    background-blend-mode: color;
+}
+
+
+
+.section{
+
+
+    background-color: rgba(240, 240, 240, 0.7);
+
+}

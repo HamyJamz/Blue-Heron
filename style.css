@@ -5,11 +5,7 @@ html body {
     font-family: 'Alice', serif;
     font-size: x-large;
 
-    background-image: url(watercolor-flip.png);
-    background-size:cover;
-    background-color: rgba(255, 255, 255, .7);
-
-    background-blend-mode: color;
+  
 }
 
 
@@ -39,7 +35,7 @@ html body {
 .section{
     /*background-image:url(watercolor.jpg);*/
 
-    background-color: rgba(240, 240, 240, 0.7);
+
     margin-top: 40px;
     padding: 10px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
